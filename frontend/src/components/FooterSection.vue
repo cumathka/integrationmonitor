@@ -60,7 +60,7 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    background-color: var(--yellow-500); /* Changed to yellow */
+    background-color: var(--yellow-600); /* Changed to yellow */
     padding: 4rem 0;
     min-height: 300px;
     display: flex;
@@ -90,8 +90,8 @@
   .flag-img {
     height: 180px;
     width: auto;
-    border: 2px solid ;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  
+  
   }
   
   .left-flag {

@@ -2,7 +2,7 @@
     <main class="main-content">
       <!-- Hakkımızda Bölümü -->
       <section class="content-section">
-        <h2 class="section-title">Hier kommen Sie weiter</h2>
+        <h2 class="section-title mt-5">Hier kommen Sie weiter</h2>
         <p class="section-text">
           Wir freuen uns, Sie auf unserer Plattform begrüssen zu dürfen! Wir wissen, dass der Start in einem
           neuen Land viele Herausforderungen mit sich bringt, aber auch unzählige Chancen bietet.
@@ -79,7 +79,7 @@
   
   <style scoped>
   .main-content {
-    max-width: 1318px;
+    max-width: 1518px;
     margin: 0 auto;
     padding: 0 20px;
   }

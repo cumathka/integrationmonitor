@@ -69,6 +69,7 @@ export default {
   --orange-500: rgba(253, 126, 20, 1);
   --orange-600: rgba(202, 101, 16, 1);
   --yellow-500: rgba(255, 193, 7, 1);
+  --yellow-600: rgba(255, 211, 39,.9);
   --gray-200: rgba(233, 236, 239, 1);
   --componentsbuttonprimaryhovered-background: rgba(11, 94, 215, 1);
   --componentsdropdownslight-hovered-item-text: rgba(30, 33, 37, 1);
@@ -129,7 +130,7 @@ export default {
 }
 
 .main-container {
-  max-width: 1100px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
