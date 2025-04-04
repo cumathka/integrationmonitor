@@ -10,7 +10,7 @@
         <div class="hero-overlay">
           <div class="hero-text">
             <h1 class="hero-title">Gemeinsam Weg und Wissen Teilen</h1>
-            <p class="hero-subtitle">Yolu ve bilgiyi birlikte paylaşmak</p>
+            <p class="hero-subtitle" :key="currentIndex">{{ translations[currentIndex].text }}</p>
           </div>
         </div>
       </div>
@@ -19,7 +19,36 @@
   
   <script>
   export default {
-    name: 'HeroSection'
+    name: 'HeroSection',
+    data() {
+      return {
+        currentIndex: 0,
+        rotateInterval: null,
+        translations: [
+          { lang: 'tr', text: 'Yolu ve bilgiyi birlikte paylaşmak' },
+          { lang: 'ar', text: 'مشاركة الطريق والمعرفة معا' },
+          { lang: 'fa', text: 'به اشتراک گذاشتن راه و دانش با یکدیگر' },
+          { lang: 'ps', text: 'د لارې او پوهې شریکول' },
+          { lang: 'ti', text: 'መንገድን ፍልጠትን ብሓባር ምክፋል' },
+          { lang: 'so', text: 'Wadajir u wadaagista wadada iyo aqoonta' },
+          { lang: 'ur', text: 'راستہ اور علم کا مشترکہ اشتراک' },
+          { lang: 'ku', text: 'Rê û zanînê bi hev re parve bikin' },
+          { lang: 'am', text: 'መንገድና እውቀትን በአንድነት መካፈል' },
+          { lang: 'sw', text: 'Kushiriki njia na maarifa pamoja' }
+        ]
+      }
+    },
+    mounted() {
+      this.rotateInterval = setInterval(this.rotateText, 1500);
+    },
+    methods: {
+      rotateText() {
+        this.currentIndex = (this.currentIndex + 1) % this.translations.length;
+      }
+    },
+    beforeUnmount() {
+      clearInterval(this.rotateInterval);
+    }
   }
   </script>
   
@@ -77,6 +106,14 @@
     font-size: var(--text-h3-font-size);
     color: white;
     margin: 0;
+    transition: opacity 0.3s ease;
+    animation: fadeInOut 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    20%, 80% { opacity: 1; }
+    100% { opacity: 0; }
   }
   
   /* Responsive adjustments */
