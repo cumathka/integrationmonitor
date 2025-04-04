@@ -1,8 +1,25 @@
 <template>
   <div class="landing-page">
+    <!-- Arka plan daireleri -->
+    <div class="ellipse"></div>
+    <div class="div"></div>
+    <div class="ellipse-2"></div>
+    <div class="ellipse-3"></div>
+
     <TheNavbar />
     <HeroSection />
-    <MainContent />
+
+    <!-- Main content with proper container -->
+    <div class="main-container">
+      <MainContent />
+    </div>
+
+    <!-- Full-width bottom image -->
+    <div class="full-width-image">
+      <img src="https://c.animaapp.com/m939jagjfdOBIu/img/group-2.png" alt="Content bottom" class="img-fluid">
+    </div>
+
+    <!-- Footer will be full-width -->
     <FooterSection />
   </div>
 </template>
@@ -28,6 +45,7 @@ export default {
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css?family=ABeeZee|Roboto:400|Roboto+Condensed:400");
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css");
 
 :root {
   --cyan-600: rgba(10, 162, 192, 1);
@@ -105,62 +123,94 @@ export default {
 }
 
 .landing-page {
-  background-color: rgba(255, 255, 255, 1.0);
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll */
 }
 
-.landing-page::before {
-  content: '';
-  position: absolute;
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.full-width-image {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 60px;
+}
+
+.full-width-image img {
   width: 100%;
-  height: 100%;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(252, 251, 254, 1) 100%);
-  z-index: -1;
+  height: 499px;
+  object-fit: cover;
+  display: block;
 }
 
+/* Dairelerin stilleri */
 .landing-page .ellipse {
   position: absolute;
-  width: 469px;
-  height: 475px;
-  top: 1337px;
-  left: 0;
+  width: 400px;
+  height: 400px;
+  top: 40%;
+  left: -250px;
   background-color: var(--yellow-100);
-  border-radius: 234.5px / 237.5px;
-  z-index: -1;
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .landing-page .div {
   position: absolute;
-  width: 349px;
-  height: 353px;
-  top: 2037px;
-  right: -30px;
+  width: 350px;
+  height: 350px;
+  top: 55%;
+  right: -200px;
   background-color: var(--yellow-100);
-  border-radius: 174.5px / 176.5px;
-  z-index: -1;
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .landing-page .ellipse-2 {
   position: absolute;
-  width: 253px;
-  height: 257px;
-  top: 2439px;
-  left: 173px;
+  width: 250px;
+  height: 250px;
+  top: 67%;
+  left: -150px;
   background-color: var(--orange-100);
-  border-radius: 126.5px / 128.5px;
-  z-index: -1;
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .landing-page .ellipse-3 {
   position: absolute;
   width: 469px;
   height: 475px;
-  top: 1129px;
-  right: -30px;
+  top: 32%;
+  right: -300px;
   background-color: var(--orange-100);
-  border-radius: 234.5px / 237.5px;
-  z-index: -1;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+
+  .landing-page .ellipse,
+  .landing-page .div,
+  .landing-page .ellipse-2,
+  .landing-page .ellipse-3 {
+    display: none;
+  }
+
+  .main-container {
+    padding: 0 15px;
+  }
 }
 
 .text-h1 {

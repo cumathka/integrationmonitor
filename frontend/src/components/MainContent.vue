@@ -1,8 +1,9 @@
 <template>
-    <main class="container py-5 my-5">
-      <section class="mb-5">
-        <h2 class="text-h1 mb-4" style="color: var(--orange-600);">Hier kommen Sie weiter</h2>
-        <p class="text-regular">
+    <main class="main-content">
+      <!-- Hakkımızda Bölümü -->
+      <section class="content-section">
+        <h2 class="section-title">Hier kommen Sie weiter</h2>
+        <p class="section-text">
           Wir freuen uns, Sie auf unserer Plattform begrüssen zu dürfen! Wir wissen, dass der Start in einem
           neuen Land viele Herausforderungen mit sich bringt, aber auch unzählige Chancen bietet.
           <br><br>
@@ -16,41 +17,35 @@
         </p>
       </section>
       
-      <section class="my-5">
-        <div class="row g-4">
-          <div class="col-md-3" v-for="(card, index) in cards" :key="index">
-            <div class="card h-100 border-0" style="border-radius: 31px;">
-              <div class="card-body text-center py-5" :style="{ backgroundColor: index % 2 ? 'var(--cyan-600)' : 'var(--cyan-700)' }">
-                <div class="mb-4">
-                  <img :src="card.icon" :alt="card.title" width="128" height="128">
-                </div>
-                <h3 class="text-h3 text-white">{{ card.title }}</h3>
+      <!-- Kartlar Bölümü -->
+      <section class="card-section">
+        <div class="card-grid">
+          <div class="card-item" v-for="(card, index) in cards" :key="index">
+            <div class="card-inner" :class="index % 2 ? 'cyan-light' : 'cyan-dark'">
+              <div class="card-icon">
+                <img :src="card.icon" :alt="card.title" width="128" height="128">
               </div>
+              <h3 class="card-title">{{ card.title }}</h3>
             </div>
           </div>
         </div>
       </section>
       
-      <section class="my-5">
-        <h2 class="text-h1 mb-4" style="color: var(--orange-600);">Events</h2>
-        <p class="text-regular mb-4">
+      <!-- Etkinlikler Bölümü -->
+      <section class="event-section">
+        <h2 class="section-title">Events</h2>
+        <p class="section-text">
           Entdecken Sie Veranstaltungen in Uri und Umgebung, die Ihnen helfen, neue Kontakte zu knüpfen und sich
           zu integrieren.
         </p>
-        <img 
-          src="https://c.animaapp.com/m939jagjfdOBIu/img/image-1.png" 
-          alt="Events" 
-          class="img-fluid rounded"
-          style="height: 638px; width: 100%; object-fit: cover;"
-        >
+        <div class="event-image">
+          <img 
+            src="https://c.animaapp.com/m939jagjfdOBIu/img/image-1.png" 
+            alt="Events" 
+            class="img-fluid"
+          >
+        </div>
       </section>
-      
-      <img 
-        src="https://c.animaapp.com/m939jagjfdOBIu/img/group-2.png" 
-        alt="Content bottom" 
-        class="img-fluid w-100 mt-5"
-        style="height: 499px; object-fit: cover;"
-      >
     </main>
   </template>
   
@@ -81,3 +76,142 @@
     }
   }
   </script>
+  
+  <style scoped>
+  .main-content {
+    max-width: 1318px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Bölüm Stilleri */
+  .content-section,
+  .card-section,
+  .event-section {
+    margin-bottom: 60px;
+  }
+  
+  .section-title {
+    font-family: var(--text-h1-font-family);
+    font-weight: var(--text-h1-font-weight);
+    font-size: var(--text-h1-font-size);
+    color: var(--orange-600);
+    margin-bottom: 28px;
+  }
+  
+  .section-text {
+    font-family: var(--text-regular-font-family);
+    font-weight: var(--text-regular-font-weight);
+    font-size: var(--text-regular-font-size);
+    line-height: var(--text-regular-line-height);
+  }
+  
+  /* Kart Grid Sistemi */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card-item {
+    height: 100%;
+  }
+  
+  .card-inner {
+    height: 100%;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cyan-light {
+    background-color: var(--cyan-600);
+  }
+  
+  .cyan-dark {
+    background-color: var(--cyan-700);
+  }
+  
+  .card-icon {
+    margin-bottom: 20px;
+  }
+  
+  .card-icon img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .card-title {
+    font-family: var(--text-h3-font-family);
+    font-weight: var(--text-h3-font-weight);
+    font-size: 1.2rem;
+    color: white;
+    margin: 10px 0 0 0;
+  }
+  
+  /* Etkinlik Görseli */
+  .event-image {
+    margin-top: 28px;
+  }
+  
+  .event-image img {
+    width: 100%;
+    height: 638px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .bottom-image-container {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 60px;
+}
+
+.bottom-image {
+  width: 100%;
+  height: 499px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .bottom-image {
+    height: 300px;
+  }
+}
+  
+  /* Responsive Düzen */
+  @media (max-width: 968px) {
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .event-image img,
+    .bottom-image img {
+      height: auto;
+      max-height: 400px;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+  </style>

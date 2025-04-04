@@ -1,12 +1,22 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import path from 'path' // Path modülünü içe aktar
+import { createHtmlPlugin } from 'vite-plugin-html'
+import vueDevTools from 'vite-plugin-vue-devtools'
+import path from 'path'
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    vueDevTools(), // Vue DevTools eklentisini aktif et
+    createHtmlPlugin({}) // HTML yapılandırması
+  ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'), // @ işaretini src dizinine yönlendir
+      '@': path.resolve(__dirname, './src'), // @ alias'ını src dizinine yönlendir
     },
   },
+  server: {
+    port: 5173, // Özel bir port belirleyebilirsin (isteğe bağlı)
+    open: true, // Sunucu başlatıldığında otomatik olarak tarayıcıda aç
+  }
 })

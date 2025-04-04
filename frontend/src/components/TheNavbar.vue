@@ -3,7 +3,7 @@
       <div class="container">
         <div class="d-flex align-items-center">
           <img 
-            src="https://c.animaapp.com/m939jagjfdOBIu/img/bull-frontal-head-svgrepo-com.svg" 
+            src="@/assets/logo.png" 
             alt="Logo" 
             width="60" 
             height="60"
