@@ -16,7 +16,7 @@
 
     <!-- Full-width bottom image -->
     <div class="full-width-image">
-      <img src="https://c.animaapp.com/m939jagjfdOBIu/img/group-2.png" alt="Content bottom" class="img-fluid">
+      <img src="@/assets/footer.png" alt="Content bottom" class="img-fluid">
     </div>
 
     <!-- Footer will be full-width -->
