@@ -57,11 +57,8 @@
           { text: 'வணக்கம்', lang: 'Tamil' },
           { text: 'Përshëndetje', lang: 'Albanisch' },
           { text: 'नमस्ते', lang: 'Hindi' },
-          { text: 'ہیلو', lang: 'Urdu' },
-          { text: 'Olá', lang: 'Portugiesisch' },
           { text: 'Zdravo', lang: 'Serbisch' },
           { text: 'Tungjatjeta', lang: 'Kosovarisch' },
-          { text: 'სალამი', lang: 'Georgisch' },
           { text: 'Jambo', lang: 'Swahili' },
           { text: 'hello', lang: 'Englisch' }
         ]
@@ -110,16 +107,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50%;
-    background: rgba(0, 123, 167, 0.55); /* Şeffaf mavi */
+    background: rgba(8, 121, 144, 0.8); /* Şeffaf mavi */
     padding: 30px;
     border-radius: 20px;
     text-align: center;
-    color: yellow;
+    color:rgb(255, 255, 255);
   }
   
   /* Başlık */
   .hero-title {
-    font-size: 2.5rem;
+    font-size:5.5rem;
     margin-bottom: 10px;
   }
   
@@ -150,7 +147,7 @@
   }
   
   .greeting-item {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -193,7 +190,7 @@
   /* Remove old delay classes and fadeIn animation */
   
   .language-name {
-    font-size: 0.65rem;
+    font-size: 1.65rem;
     opacity: 0.6;
     margin-top: 2px;
   }

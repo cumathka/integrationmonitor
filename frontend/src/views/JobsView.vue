@@ -142,7 +142,7 @@ img {
   transform: translate(-50%, -50%);
   width: 40%;
   min-width: 200px;
-  background: rgba(0, 123, 167, 0.55); /* Şeffaf mavi */
+  background: rgba(8, 121, 144, 0.8); /* Şeffaf mavi */
   padding: 10px;
   border-radius: 20px;
   text-align: center;

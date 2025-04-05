@@ -160,7 +160,7 @@ img {
   height: 100vh;
   object-fit: contain;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(8, 121, 144, 0.8); /* Şeffaf mavi */
   cursor: zoom-out;
   padding: 20px;
   box-sizing: border-box;

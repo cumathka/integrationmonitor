@@ -244,7 +244,8 @@ img {
   transform: translate(-50%, -50%);
   width: 40%; /* Reduced from 50% */
   min-width: 200px; /* Reduced from 300px */
-  background: rgba(0, 123, 167, 0.55); /* Changed from blue to dark gray */
+  background: rgba(8, 121, 144, 0.8); /* Şeffaf mavi */
+  /* Changed from blue to dark gray */
   /*background: rgba(40, 40, 40, 0.7);  Changed from blue to dark gray */
   padding: 10px; /* Reduced padding */
   border-radius: 20px;
