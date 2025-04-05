@@ -8,7 +8,10 @@
         alt="Information"
       />
       <div class="hero-overlay">
-        <h2>FAKTEN UND LINKS</h2>
+        <div class="overlay-content">
+          <img src="@/assets/logo1.png" alt="Uri Flag" class="logo">
+          <h2>FAKTEN UND LINKS</h2>
+        </div>
       </div>
     </div>
   </div>
@@ -76,31 +79,55 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
-  min-width: 300px;
+  width: 30%; /* Reduced from 50% */
+  min-width: 200px; /* Reduced from 300px */
   background: rgba(0, 123, 167, 0.55);
-  padding: 30px;
+  padding: 10px; /* Reduced padding */
   border-radius: 20px;
   text-align: center;
   color: yellow;
-  pointer-events: none; /* Allows clicking through to the image */
+  pointer-events: none;
+}
+
+.overlay-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  pointer-events: auto;
+  object-fit: contain;
 }
 
 .hero-overlay h2 {
   margin: 0;
-  font-size: 2em;
+  font-size: 2.5em; /* Increased from 2em */
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
   .hero-overlay {
-    width: 80%;
-    padding: 20px;
+    width: 60%; /* Reduced from 80% */
+    padding: 15px;
+  }
+  
+  .overlay-content {
+    gap: 10px;
+  }
+  
+  .logo {
+    height: 30px;
   }
   
   .hero-overlay h2 {
-    font-size: 1.5em;
+    font-size: 1.8em; /* Increased from 1.2em */
   }
 }
 </style>

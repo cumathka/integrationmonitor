@@ -5,7 +5,7 @@
         <div class="hero-overlay">
           <div class="hero-text">
             <div class="main-greeting">
-              <img src="@/assets/uri-flag.png" alt="Uri Flag" class="uri-flag">
+              <img src="@/assets/logo1.png" alt="Uri Flag" class="uri-flag">
               <h1 class="hero-title">Griäzi! Willkommen!</h1>
             </div>
             <div class="greetings">

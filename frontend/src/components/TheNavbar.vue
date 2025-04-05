@@ -4,7 +4,7 @@
         <div class="d-flex align-items-center">
           <router-link to="/" class="navbar-brand">
             <img 
-              src="@/assets/logo.png" 
+              src="@/assets/logo1.png" 
               alt="Logo" 
               width="60" 
               height="60"
