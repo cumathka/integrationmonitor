@@ -1,6 +1,10 @@
 from django.db import models
 from locations.models import Location  # Import Location model
 
+# page models
+from jobs.cms_pages import JobsPage
+
+
 class Company(models.Model): 
     name = models.CharField(max_length=255)
     location = models.ForeignKey(Location, on_delete=models.CASCADE)  # GIS Location
