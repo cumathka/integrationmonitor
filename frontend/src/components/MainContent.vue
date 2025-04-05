@@ -88,7 +88,7 @@
   
   <style scoped>
   .main-content {
-    max-width: 1518px;
+    max-width: 1218px;
     margin: 0 auto;
     padding: 0 20px;
   }

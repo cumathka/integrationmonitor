@@ -10,7 +10,7 @@
       <div class="hero-overlay">
         <div class="overlay-content">
           <img src="@/assets/logo1.png" alt="Uri Flag" class="logo">
-        <h2>INTEGRATIONSEVENTS</h2>
+        <h1>Integrationsevents</h1>
         </div>
       </div>
       <div class="container">
@@ -215,15 +215,24 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%;
-  min-width: 200px;
-  background: rgba(0, 123, 167, 0.55);
-  padding: 10px;
+  width: 50%; /* Reduced from 50% */
+  min-width: 200px; /* Reduced from 300px */
+  background: rgba(0, 123, 167, 0.55);; 
+  padding: 30px; /* Reduced padding */
   border-radius: 20px;
   text-align: center;
-  color: yellow;
+  color: rgb(255, 255, 255);
   pointer-events: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: var(--text-h1-font-family);
+  font-weight: var(--text-h1-font-weight);
+}
+
+
+.hero-overlay h1 {
+  margin: 0;
+  font-size: 5em; /* Increased from 2em */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .overlay-content {
@@ -263,12 +272,7 @@ img {
   text-decoration: underline;
 }
 
-.hero-overlay h2 {
-  margin: 0;
-  font-size: 2.5em;
-  font-weight: 800;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
+
 
 .events-content {
   max-width: 1200px;

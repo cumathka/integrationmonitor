@@ -20,7 +20,7 @@
         </div>
       </div>
       <!-- New Orange Section -->
-      <div class="orange-section">
+      <div class="orange-section pt-5 pb-5">
         <div class="orange-content">
           <h1 class="section-title">Gemeinsam Weg und Wissen Teilen</h1>
           <p class="section-subtitle" :key="currentIndex">{{ translations[currentIndex].text }}</p>
@@ -58,9 +58,6 @@
           { text: 'Përshëndetje', lang: 'Albanisch' },
           { text: 'नमस्ते', lang: 'Hindi' },
           { text: 'Zdravo', lang: 'Serbisch' },
-          { text: 'Tungjatjeta', lang: 'Kosovarisch' },
-          { text: 'Jambo', lang: 'Swahili' },
-          { text: 'hello', lang: 'Englisch' }
         ]
       }
     },
@@ -116,6 +113,8 @@
   
   /* Başlık */
   .hero-title {
+    font-family: var(--text-h1-font-family);
+    font-weight: var(--text-h1-font-weight);
     font-size:5.5rem;
     margin-bottom: 10px;
   }
@@ -253,7 +252,7 @@
   .section-title {
     font-family: var(--text-h1-font-family);
     font-weight: var(--text-h1-font-weight);
-    font-size: 2.5rem;
+    font-size: 4rem;
     color: white;
     margin-bottom: 1.5rem;
   }
@@ -261,7 +260,7 @@
   .section-subtitle {
     font-family: var(--text-h3-font-family);
     font-weight: var(--text-h3-font-weight);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: white;
     margin: 0;
     animation: fadeInOut 1.5s ease-in-out;

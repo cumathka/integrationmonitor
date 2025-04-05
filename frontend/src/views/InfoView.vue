@@ -10,7 +10,7 @@
       <div class="hero-overlay">
         <div class="overlay-content">
           <img src="@/assets/logo1.png" alt="Uri Flag" class="logo">
-          <h2>FAKTEN UND LINKS</h2>
+          <h1>Fakten und Links</h1>
         </div>
       </div>
 
@@ -247,10 +247,12 @@ img {
   background: rgba(8, 121, 144, 0.8); /* Şeffaf mavi */
   /* Changed from blue to dark gray */
   /*background: rgba(40, 40, 40, 0.7);  Changed from blue to dark gray */
-  padding: 10px; /* Reduced padding */
+  padding: 30px; /* Reduced padding */
   border-radius: 20px;
   text-align: center;
-  color: yellow;
+  color: rgb(255, 255, 255);
+  font-family: var(--text-h1-font-family);
+  font-weight: var(--text-h1-font-weight);
   pointer-events: none;
 }
 
@@ -270,9 +272,9 @@ img {
   object-fit: contain;
 }
 
-.hero-overlay h2 {
+.hero-overlay h1 {
   margin: 0;
-  font-size: 2.5em; /* Increased from 2em */
+  font-size: 5em; /* Increased from 2em */
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
