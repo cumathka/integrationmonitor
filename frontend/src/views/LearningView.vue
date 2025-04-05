@@ -37,12 +37,11 @@
           <!-- Deutschkurse -->
           <div class="col-md-6">
             <div class="card h-100">
-              <img src="https://via.placeholder.com/600x300?text=Deutschkurse" class="card-img-top" alt="Deutschkurse">
+              <img src="@/assets/lern1.png" class="card-img-top" alt="Deutschkurse">
               <div class="card-body">
                 <h5 class="card-title">Deutschkurse</h5>
                 <p class="card-text">
-                  Das Verstehen und Sprechen der Deutschen Sprache ist ein wichtiger Schritt, um sich in Uri zurecht zu finden und Kontakte mit Urnerinnen und Urnern zu knüpfen.
-                </p>
+                  Das Verstehen und Sprechen der Deutschen Sprache ist ein wichtiger Schritt, um sich in Uri zurecht zu finden und Kontakte mit Urnerinnen und Urnern zu knüpfen.                </p>
                 <ul class="list-unstyled">
                   <li><a href="#" class="link-primary">Deutschkurse beim BWZ Uri</a></li>
                   <li><a href="#" class="link-primary">Deutsch üben im Treffpunkt26</a></li>
@@ -54,12 +53,17 @@
           <!-- Lebenslauf verbessern -->
           <div class="col-md-6">
             <div class="card h-100">
-              <img src="https://via.placeholder.com/600x300?text=Lebenslauf" class="card-img-top" alt="Lebenslauf">
+              <img src="@/assets/lern2.png" class="card-img-top" alt="Lebenslauf">
               <div class="card-body">
                 <h5 class="card-title">Lebenslauf verbessern</h5>
                 <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Ein professioneller Lebenslauf ist Ihre Visitenkarte im Bewerbungsprozess. Hier finden Sie Hilfe bei der Erstellung und Optimierung Ihrer Bewerbungsunterlagen.
                 </p>
+                <ul class="list-unstyled">
+                  <li><a href="#" class="link-primary">Kostenlose Lebenslauf-Vorlagen</a></li>
+                  <li><a href="#" class="link-primary">Bewerbungscoaching beim RAV</a></li>
+                  <li><a href="#" class="link-primary">Tipps für erfolgreiche Bewerbungen</a></li>
+                </ul>
               </div>
             </div>
           </div>
@@ -67,7 +71,7 @@
           <!-- Schweizer Kultur -->
           <div class="col-md-6">
             <div class="card h-100">
-              <img src="https://via.placeholder.com/600x300?text=Urner+Kultur" class="card-img-top" alt="Kultur">
+              <img src="@/assets/lern3.png" class="card-img-top" alt="Kultur">
               <div class="card-body">
                 <h5 class="card-title">Schweizer- und Urner Kultur</h5>
                 <p class="card-text">
@@ -85,12 +89,18 @@
           <!-- Weiterbildungen -->
           <div class="col-md-6">
             <div class="card h-100">
-              <img src="https://via.placeholder.com/600x300?text=Weiterbildungen" class="card-img-top" alt="Weiterbildungen">
+              <img src="@/assets/lern4.png" class="card-img-top" alt="Weiterbildungen">
               <div class="card-body">
                 <h5 class="card-title">Weiterbildungen</h5>
                 <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Lebenslanges Lernen ist der Schlüssel zum beruflichen Erfolg. Entdecken Sie vielfältige Weiterbildungsangebote im Kanton Uri.
                 </p>
+                <ul class="list-unstyled">
+                  <li><a href="#" class="link-primary">Kurse am BWZ Uri</a></li>
+                  <li><a href="#" class="link-primary">Berufliche Weiterbildungen</a></li>
+                  <li><a href="#" class="link-primary">Finanzielle Unterstützung</a></li>
+                  <li><a href="#" class="link-primary">Bildungsberatung Uri</a></li>
+                </ul>
               </div>
             </div>
           </div>
