@@ -79,7 +79,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 30%; /* Reduced from 50% */
+  width: 40%; /* Reduced from 50% */
   min-width: 200px; /* Reduced from 300px */
   background: rgba(0, 123, 167, 0.55);
   padding: 10px; /* Reduced padding */
