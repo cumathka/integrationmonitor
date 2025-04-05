@@ -43,8 +43,8 @@
                 <p class="card-text">
                   Das Verstehen und Sprechen der Deutschen Sprache ist ein wichtiger Schritt, um sich in Uri zurecht zu finden und Kontakte mit Urnerinnen und Urnern zu knüpfen.                </p>
                 <ul class="list-unstyled">
-                  <li><a href="#" class="link-primary">Deutschkurse beim BWZ Uri</a></li>
-                  <li><a href="#" class="link-primary">Deutsch üben im Treffpunkt26</a></li>
+                  <li><a href="https://treffpunkt26.jimdofree.com/angebote/lernpunkt26/deutschangebote/" target="_blank" class="link-primary">Deutsch üben im Treffpunkt26 (Gratis)</a></li>
+                  <li><a href="https://lernatelierluzern.ch/index.php/de-ch/" target="_blank" class="link-primary">Lernatelier Luzern (Gratis)</a></li>
                 </ul>
               </div>
             </div>
@@ -96,10 +96,9 @@
                   Lebenslanges Lernen ist der Schlüssel zum beruflichen Erfolg. Entdecken Sie vielfältige Weiterbildungsangebote im Kanton Uri.
                 </p>
                 <ul class="list-unstyled">
-                  <li><a href="#" class="link-primary">Kurse am BWZ Uri</a></li>
-                  <li><a href="#" class="link-primary">Berufliche Weiterbildungen</a></li>
-                  <li><a href="#" class="link-primary">Finanzielle Unterstützung</a></li>
-                  <li><a href="#" class="link-primary">Bildungsberatung Uri</a></li>
+                  <li><a href="https://weiterbildung.bwzuri.ch/" target="_blank" class="link-primary">BWZ Uri Weiterbildungen</a></li>
+                  <li><a href="https://weiterbildung.ur.ch/" target="_blank" class="link-primary">Weiterbildung Kanton Uri</a></li>
+                  <li><a href="https://www.srk-uri.ch/kurswesen" target="_blank" class="link-primary">SRK Uri Kurse</a></li>
                 </ul>
               </div>
             </div>
