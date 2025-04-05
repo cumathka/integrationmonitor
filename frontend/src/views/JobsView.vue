@@ -211,7 +211,6 @@ img {
   padding: 30px;
   background-color: var(--secondary-color);
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .content-section p {
