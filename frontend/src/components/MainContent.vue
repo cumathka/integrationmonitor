@@ -20,14 +20,19 @@
       <!-- Kartlar Bölümü -->
       <section class="card-section">
         <div class="card-grid">
-          <div class="card-item" v-for="(card, index) in cards" :key="index">
+          <router-link 
+            v-for="(card, index) in cards" 
+            :key="index"
+            :to="card.route"
+            class="card-item"
+          >
             <div class="card-inner" :class="index % 2 ? 'cyan-light' : 'cyan-dark'">
               <div class="card-icon">
                 <img :src="card.icon" :alt="card.title" width="128" height="128">
               </div>
               <h3 class="card-title">{{ card.title }}</h3>
             </div>
-          </div>
+          </router-link>
         </div>
       </section>
       
@@ -57,19 +62,23 @@
         cards: [
           { 
             title: 'Informationen',
-            icon: 'https://c.animaapp.com/m939jagjfdOBIu/img/union-8.svg'
+            icon: 'https://c.animaapp.com/m939jagjfdOBIu/img/union-8.svg',
+            route: '/info'
           },
           { 
             title: 'Lernen',
-            icon: 'https://c.animaapp.com/m939jagjfdOBIu/img/union-23.svg'
+            icon: 'https://c.animaapp.com/m939jagjfdOBIu/img/union-23.svg',
+            route: '/learning'
           },
           { 
             title: 'Jobs',
-            icon: 'https://c.animaapp.com/m939jagjfdOBIu/img/union-11.svg'
+            icon: 'https://c.animaapp.com/m939jagjfdOBIu/img/union-11.svg',
+            route: '/jobs'
           },
           { 
             title: 'Events',
-            icon: 'https://c.animaapp.com/m939jagjfdOBIu/img/union-10.svg'
+            icon: 'https://c.animaapp.com/m939jagjfdOBIu/img/union-10.svg',
+            route: '/events'
           }
         ]
       }
@@ -117,6 +126,13 @@
   
   .card-item {
     height: 100%;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .card-item:hover {
+    transform: scale(1.02);
   }
   
   .card-inner {
