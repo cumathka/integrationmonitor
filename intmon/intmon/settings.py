@@ -20,7 +20,8 @@ env = environ.Env(
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-PARENT_DIR = Path(__file__).resolve().parent
+PARENT_DIR = Path(__file__).resolve().parent.parent.parent
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
@@ -75,6 +76,7 @@ INSTALLED_APPS = [
     'events',
     'locations',
     'jobs',
+    'cms_blocks',
 ]
 
 MIDDLEWARE = [
@@ -86,6 +88,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'intmon.urls'
@@ -172,8 +175,10 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
+USE_L10N = True
 
 USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)
@@ -181,6 +186,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    os.path.join(PARENT_DIR, "frontend/static")
+]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
@@ -193,6 +201,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 WAGTAIL_SITE_NAME = "intmon"
 WAGTAILADMIN_BASE_URL = 'http://intmon.ch'
 WAGTAILDOCS_EXTENSIONS = ['csv', 'docx', 'key', 'odt', 'pdf', 'pptx', 'rtf', 'txt', 'xlsx', 'zip']
+WAGTAIL_I18N_ENABLED = True
+
+WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
+    ('de', "German"),
+    ('en', "English"),
+    ('fr', "French"),
+    ('it', "Italian"),
+    ('tr', "Turkish"),
+]
+
 
 
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 10_000
