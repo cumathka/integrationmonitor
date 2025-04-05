@@ -7,11 +7,11 @@
     <div class="ellipse-3"></div>
 
     <TheNavbar />
-    <HeroSection />
 
     <!-- Main content with proper container -->
     <div class="main-container">
-      <MainContent />
+      <router-view v-if="$route.path !== '/'" />
+      <HomeView v-else />
     </div>
 
     <!-- Full-width bottom image -->
@@ -26,16 +26,14 @@
 
 <script>
 import TheNavbar from '@/components/TheNavbar.vue';
-import HeroSection from '@/components/HeroSection.vue';
-import MainContent from '@/components/MainContent.vue';
 import FooterSection from '@/components/FooterSection.vue';
+import HomeView from '@/views/HomeView.vue';
 
 export default {
   name: 'App',
   components: {
     TheNavbar,
-    HeroSection,
-    MainContent,
+    HomeView,
     FooterSection
   }
 }
@@ -69,7 +67,7 @@ export default {
   --orange-500: rgba(253, 126, 20, 1);
   --orange-600: rgba(202, 101, 16, 1);
   --yellow-500: rgba(255, 193, 7, 1);
-  --yellow-600: rgba(255, 211, 39,.9);
+  --yellow-600: rgba(255, 211, 39, .9);
   --gray-200: rgba(233, 236, 239, 1);
   --componentsbuttonprimaryhovered-background: rgba(11, 94, 215, 1);
   --componentsdropdownslight-hovered-item-text: rgba(30, 33, 37, 1);
