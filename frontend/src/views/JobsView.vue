@@ -17,7 +17,7 @@
 
     <div class="container">
       <nav class="breadcrumb">
-        <a href="#">Home</a> > <a href="#">Arbeitsmöglichkeiten</a>
+        <router-link to="/">Home</router-link> > <router-link to="/jobs">Arbeitsmöglichkeiten</router-link>
       </nav>
       
       <header class="page-header">
@@ -140,10 +140,10 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%; /* Reduced from 50% */
-  min-width: 200px; /* Reduced from 300px */
-  background: rgba(0, 123, 167, 0.55);
-  padding: 10px; /* Reduced padding */
+  width: 40%;
+  min-width: 200px;
+  background: rgba(0, 123, 167, 0.55); /* Şeffaf mavi */
+  padding: 10px;
   border-radius: 20px;
   text-align: center;
   color: yellow;

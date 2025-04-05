@@ -13,6 +13,13 @@
         <h2>LEBENSLAG LERNEN</h2>
         </div>
       </div>
+
+      <div class="container">
+      <nav class="breadcrumb">
+        <router-link to="/">Home</router-link> > <router-link to="/learning">Lernen</router-link>
+      </nav>
+    </div>
+
     </div>
   </div>
 </template>
@@ -81,7 +88,7 @@ img {
   transform: translate(-50%, -50%);
   width: 40%; /* Reduced from 50% */
   min-width: 200px; /* Reduced from 300px */
-  background: rgba(0, 123, 167, 0.55);
+  background: rgba(0, 123, 167, 0.55);; 
   padding: 10px; /* Reduced padding */
   border-radius: 20px;
   text-align: center;
@@ -111,6 +118,28 @@ img {
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.breadcrumb {
+  padding: 15px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
 
 @media (max-width: 768px) {
   .hero-overlay {

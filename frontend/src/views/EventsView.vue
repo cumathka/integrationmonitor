@@ -13,6 +13,11 @@
         <h2>INTEGRATIONSEVENTS</h2>
         </div>
       </div>
+      <div class="container">
+      <nav class="breadcrumb">
+        <router-link to="/">Home</router-link> > <router-link to="/events">Events</router-link>
+      </nav>
+    </div>
     </div>
   </div>
 </template>
@@ -79,14 +84,15 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%; /* Reduced from 50% */
-  min-width: 200px; /* Reduced from 300px */
-  background: rgba(0, 123, 167, 0.55);
-  padding: 10px; /* Reduced padding */
+  width: 40%;
+  min-width: 200px;
+  background: rgba(0, 123, 167, 0.55); /* Şeffaf mavi */
+  padding: 10px;
   border-radius: 20px;
   text-align: center;
   color: yellow;
   pointer-events: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .overlay-content {
@@ -105,16 +111,37 @@ img {
   object-fit: contain;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.breadcrumb {
+  padding: 15px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
 .hero-overlay h2 {
   margin: 0;
-  font-size: 2.5em; /* Increased from 2em */
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 2.5em;
+  font-weight: 800;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
   .hero-overlay {
-    width: 60%; /* Reduced from 80% */
+    width: 60%;
     padding: 15px;
   }
   
@@ -127,7 +154,7 @@ img {
   }
   
   .hero-overlay h2 {
-    font-size: 1.8em; /* Increased from 1.2em */
+    font-size: 1.8em;
   }
 }
 </style>
