@@ -9,7 +9,7 @@
     <TheNavbar />
 
     <!-- Main content with proper container -->
-    <div class="main-container">
+    <div >
       <router-view v-if="$route.path !== '/'" />
       <HomeView v-else />
     </div>

@@ -50,51 +50,7 @@ export default {
 }
 </script>
 
-<style>
-
-.highlight {
-    background-color: #f57223;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    min-height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.main-text {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.translation-text {
-    font-size: 1.3rem;
-    font-style: italic;
-    opacity: 0.9;
-}
-
-.navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-    font-weight: bold;
-    color: #333;
-}
-
-.nav-link {
-    color: #666;
-}
-
-.nav-link:hover {
-    color: #f57223;
-}
-
+<style scoped>
 .map-container {
     background-color: #ffffff;
     padding: 20px;
