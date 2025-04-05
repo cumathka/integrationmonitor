@@ -10,16 +10,27 @@
       <div class="hero-overlay">
         <div class="overlay-content">
           <img src="@/assets/logo1.png" alt="Uri Flag" class="logo">
-        <h2>LEBENSLAG LERNEN</h2>
+          <h2>LEBENSLAG LERNEN</h2>
         </div>
       </div>
-
       <div class="container">
-      <nav class="breadcrumb">
-        <router-link to="/">Home</router-link> > <router-link to="/learning">Lernen</router-link>
-      </nav>
+        <nav class="breadcrumb">
+          <router-link to="/">Home</router-link> > <router-link to="/learning">Lernen</router-link>
+        </nav>
+      </div>
     </div>
-
+    <div class="events-content">
+      <header class="page-header">
+        <h1>Netzwerken und Gemeinschaft erleben</h1>
+      </header>
+      <section class="content-section">
+        <p class="description">
+          Veranstaltungen sind eine wunderbare Möglichkeit, neue Menschen kennenzulernen und sich in der Gemeinschaft zu integrieren. 
+          Auf dieser Seite finden Sie eine Übersicht über Networking-Events, Career Cafés und Tandem-Programme in Uri. 
+          Diese Veranstaltungen bieten Ihnen die Gelegenheit, Kontakte zu knüpfen, Erfahrungen auszutauschen und sich in einem 
+          unterstützenden Umfeld weiterzuentwickeln. Kommen Sie vorbei und werden Sie Teil unserer lebendigen Gemeinschaft!
+        </p>
+      </section>
     </div>
   </div>
 </template>
@@ -140,6 +151,30 @@ img {
   text-decoration: underline;
 }
 
+.events-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.page-header {
+  margin: 30px 0;
+}
+
+.page-header h1 {
+  font-family: var(--text-h1-font-family);
+  font-weight: var(--text-h1-font-weight);
+  font-size: var(--text-h1-font-size);
+  color: var(--orange-600);
+  margin-bottom: 28px;
+}
+
+.description {
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 40px;
+  text-align: justify;
+}
 
 @media (max-width: 768px) {
   .hero-overlay {
@@ -157,6 +192,21 @@ img {
   
   .hero-overlay h2 {
     font-size: 1.8em; /* Increased from 1.2em */
+  }
+
+  .page-header {
+    padding: 30px 0;
+  }
+
+  .page-header h1 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    font-size: 1em;
+    line-height: 1.6;
+    padding: 20px;
   }
 }
 </style>
