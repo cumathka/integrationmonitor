@@ -1,0 +1,20 @@
+{% extends}
+ 
+{% block title %}Jobs{% endblock title %}
+
+{% block content %}
+    <h1>Available Jobs</h1>
+    {% for job in jobs %}
+        <div>
+            <h2>{{ job.title }}</h2>
+            <p><strong>Firma:</strong> {{ job.company.name }}</p>
+            <p><strong>Ort:</strong> {{ job.location.name }}</p>
+            <p><strong>Salary:</strong> ${{ job.salary|default:"Not specified" }}</p>
+            <p><strong>Posted on:</strong> {{ job.posted_at }}</p>
+            <p>{{ job.description }}</p>
+        </div>
+        <hr>
+    {% empty %}
+        <p>Keine Jobs.</p>
+    {% endfor %}
+{% endblock content %}
