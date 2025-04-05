@@ -9,8 +9,8 @@
         <div class="row">
           <div class="col-md-4">
             <h5 class="text-black mb-3">Kontakt</h5>
-            <p class="text-black">+49 176 2064 5533</p>
-            <p class="text-black">info@integrationmonitor.de</p>
+            <p class="text-black">+41 100 2064 5533</p>
+            <p class="text-black">info@integrationmonitor.ch</p>
             <div class="social-links mt-3">
               <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
               <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
