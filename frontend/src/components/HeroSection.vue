@@ -19,6 +19,13 @@
           </div>
         </div>
       </div>
+      <!-- New Orange Section -->
+      <div class="orange-section">
+        <div class="orange-content">
+          <h1 class="section-title">Gemeinsam Weg und Wissen Teilen</h1>
+          <p class="section-subtitle" :key="currentIndex">{{ translations[currentIndex].text }}</p>
+        </div>
+      </div>
     </section>
   </template>
   
@@ -27,6 +34,20 @@
     name: 'HeroSection',
     data() {
       return {
+        currentIndex: 0,
+        rotateInterval: null,
+        translations: [
+          { lang: 'tr', text: 'Yolu ve bilgiyi birlikte paylaşmak' },
+          { lang: 'ar', text: 'مشاركة الطريق والمعرفة معا' },
+          { lang: 'fa', text: 'به اشتراک گذاشتن راه و دانش با یکدیگر' },
+          { lang: 'ps', text: 'د لارې او پوهې شریکول' },
+          { lang: 'ti', text: 'መንገድን ፍልጠትን ብሓባር ምክፋል' },
+          { lang: 'so', text: 'Wadajir u wadaagista wadada iyo aqoonta' },
+          { lang: 'ur', text: 'راستہ اور علم کا مشترکہ اشتراک' },
+          { lang: 'ku', text: 'Rê û zanînê bi hev re parve bikin' },
+          { lang: 'am', text: 'መንገድና እውቀትን በአንድነት መካፈል' },
+          { lang: 'sw', text: 'Kushiriki njia na maarifa pamoja' }
+        ],
         greetings: [
           { text: 'مرحبا', lang: 'Arabisch' },
           { text: 'Merhaba', lang: 'Türkisch' },
@@ -45,6 +66,17 @@
           { text: 'hello', lang: 'Englisch' }
         ]
       }
+    },
+    mounted() {
+      this.rotateInterval = setInterval(this.rotateText, 1500);
+    },
+    methods: {
+      rotateText() {
+        this.currentIndex = (this.currentIndex + 1) % this.translations.length;
+      }
+    },
+    beforeUnmount() {
+      clearInterval(this.rotateInterval);
     }
   }
   </script>
@@ -205,6 +237,52 @@
   
     .language-name {
       font-size: 0.6rem;
+    }
+  }
+
+  .orange-section {
+    width: 100%;
+    background-color: rgba(253, 126, 20, 0.9);
+    padding: 1rem 0;
+  }
+
+  .orange-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .section-title {
+    font-family: var(--text-h1-font-family);
+    font-weight: var(--text-h1-font-weight);
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-family: var(--text-h3-font-family);
+    font-weight: var(--text-h3-font-weight);
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+    animation: fadeInOut 1.5s ease-in-out;
+  }
+
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    20%, 80% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
     }
   }
   </style>
