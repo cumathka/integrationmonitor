@@ -6,8 +6,8 @@
             <img 
               src="@/assets/logo1.png" 
               alt="Logo" 
-              width="60" 
-              height="60"
+              width="70" 
+              height="70"
               class="me-2"
             >
             <span class="body-lead text-dark opacity-90">Griäzi!</span>

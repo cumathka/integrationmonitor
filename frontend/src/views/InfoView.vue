@@ -130,4 +130,46 @@ img {
     font-size: 1.8em; /* Increased from 1.2em */
   }
 }
+
+.main-content {
+  max-width: 1518px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content-section,
+.card-section,
+.event-section {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-family: var(--text-h1-font-family);
+  font-weight: var(--text-h1-font-weight);
+  font-size: var(--text-h1-font-size);
+  color: var(--orange-600);
+  margin-bottom: 28px;
+}
+
+.section-text {
+  font-family: var(--text-regular-font-family);
+  font-weight: var(--text-regular-font-weight);
+  font-size: var(--text-regular-font-size);
+  line-height: var(--text-regular-line-height);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-item {
+  height: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
 </style>
