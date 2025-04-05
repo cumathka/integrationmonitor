@@ -31,6 +31,71 @@
           unterstützenden Umfeld weiterzuentwickeln. Kommen Sie vorbei und werden Sie Teil unserer lebendigen Gemeinschaft!
         </p>
       </section>
+      
+      <div class="learning-cards">
+        <div class="row g-4">
+          <!-- Deutschkurse -->
+          <div class="col-md-6">
+            <div class="card h-100">
+              <img src="https://via.placeholder.com/600x300?text=Deutschkurse" class="card-img-top" alt="Deutschkurse">
+              <div class="card-body">
+                <h5 class="card-title">Deutschkurse</h5>
+                <p class="card-text">
+                  Das Verstehen und Sprechen der Deutschen Sprache ist ein wichtiger Schritt, um sich in Uri zurecht zu finden und Kontakte mit Urnerinnen und Urnern zu knüpfen.
+                </p>
+                <ul class="list-unstyled">
+                  <li><a href="#" class="link-primary">Deutschkurse beim BWZ Uri</a></li>
+                  <li><a href="#" class="link-primary">Deutsch üben im Treffpunkt26</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lebenslauf verbessern -->
+          <div class="col-md-6">
+            <div class="card h-100">
+              <img src="https://via.placeholder.com/600x300?text=Lebenslauf" class="card-img-top" alt="Lebenslauf">
+              <div class="card-body">
+                <h5 class="card-title">Lebenslauf verbessern</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Schweizer Kultur -->
+          <div class="col-md-6">
+            <div class="card h-100">
+              <img src="https://via.placeholder.com/600x300?text=Urner+Kultur" class="card-img-top" alt="Kultur">
+              <div class="card-body">
+                <h5 class="card-title">Schweizer- und Urner Kultur</h5>
+                <p class="card-text">
+                  Als Gründungskanton ist Uri seit 1291 ein Teil der Schweizer Eidgenossenschaft. Der Kanton ist reich an Kulturgeschichte und Traditionen.
+                </p>
+                <ul class="list-unstyled">
+                  <li><a href="#" class="link-primary">Alles über Uri auf urikon.ch</a></li>
+                  <li><a href="#" class="link-primary">Kultur in Urner Museen</a></li>
+                  <li><a href="#" class="link-primary">Gelebte Traditionen in Uri</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weiterbildungen -->
+          <div class="col-md-6">
+            <div class="card h-100">
+              <img src="https://via.placeholder.com/600x300?text=Weiterbildungen" class="card-img-top" alt="Weiterbildungen">
+              <div class="card-body">
+                <h5 class="card-title">Weiterbildungen</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -174,6 +239,45 @@ img {
   color: #444;
   margin-bottom: 40px;
   text-align: justify;
+}
+
+.learning-cards {
+  padding: 40px 0;
+  background-color: #f8f9fa;
+}
+
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: var(--orange-600);
+  margin-bottom: 1rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.link-primary {
+  color: #007ba7;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.25rem 0;
+}
+
+.link-primary:hover {
+  color: #006086;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
