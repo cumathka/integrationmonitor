@@ -10,38 +10,71 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 import os
+import environ
 from pathlib import Path
+
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+PARENT_DIR = Path(__file__).resolve().parent
+
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+# SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # SECRET_KEY = 'django-insecure-*cdb!e)k-ju4c-9n@^1vd=mfq3t4)ys%!+_n2qkp@2s%b91#h*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get("DEBUG", default=0))
+#DEBUG = bool(os.environ.get("DEBUG", default=0))
+DEBUG = True
  
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS","127.0.0.1").split(",")
-
+#ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS","127.0.0.1").split(",")
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
 INSTALLED_APPS = [
+    # Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
+    # Wagtail
+    'wagtail.contrib.forms',
+    'wagtail.contrib.redirects',
+    'wagtail.embeds',
+    'wagtail.sites',
+    'wagtail.users',
+    'wagtail.snippets',
+    'wagtail.documents',
+    'wagtail.images',
+    'wagtail.search',
+    'wagtail.admin',
+    'wagtail_modeladmin',
+    'wagtail',
+    'modelcluster',
+    'taggit',
+    # 3rd party
+    'leaflet',
     # apps
     'base',
+    'home',
     'events',
+    'locations',
+    'jobs',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +85,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
 ROOT_URLCONF = 'intmon.urls'
@@ -59,7 +93,7 @@ ROOT_URLCONF = 'intmon.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(PARENT_DIR, "frontend")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,18 +118,31 @@ WSGI_APPLICATION = 'intmon.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#      'default': {
+#         #  'ENGINE': 'django.db.backends.{}'.format(
+#         #      os.getenv('DATABASE_ENGINE', 'sqlite3')
+#         #  ),
+#          'ENGINE':  'django.contrib.gis.db.backends.postgis',
+#          'NAME': os.getenv('DATABASE_NAME', 'polls'),
+#          'USER': os.getenv('DATABASE_USERNAME', 'myprojectuser'),
+#          'PASSWORD': os.getenv('DATABASE_PASSWORD', 'password'),
+#          'HOST': os.getenv('DATABASE_HOST', '127.0.0.1'),
+#          'PORT': os.getenv('DATABASE_PORT', 5432),
+#      }
+#  }
+
 DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.{}'.format(
-             os.getenv('DATABASE_ENGINE', 'sqlite3')
-         ),
-         'NAME': os.getenv('DATABASE_NAME', 'polls'),
-         'USER': os.getenv('DATABASE_USERNAME', 'myprojectuser'),
-         'PASSWORD': os.getenv('DATABASE_PASSWORD', 'password'),
-         'HOST': os.getenv('DATABASE_HOST', '127.0.0.1'),
-         'PORT': os.getenv('DATABASE_PORT', 5432),
-     }
- }
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'gis',
+        'USER': 'user001',
+        'PASSWORD': '123456789',
+        'HOST': 'localhost',
+        'PORT': '5432'
+    }
+}
+
 
 
 # Password validation
@@ -133,8 +180,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Wagtail settings
+WAGTAIL_SITE_NAME = "intmon"
+WAGTAILADMIN_BASE_URL = 'http://intmon.ch'
+WAGTAILDOCS_EXTENSIONS = ['csv', 'docx', 'key', 'odt', 'pdf', 'pptx', 'rtf', 'txt', 'xlsx', 'zip']
+
+
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 10_000

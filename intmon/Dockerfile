@@ -1,6 +1,15 @@
 # Use the official Python runtime image
 FROM python:3.13-slim AS builder
 
+RUN apt-get update \
+    && apt-get install -y binutils libproj-dev gdal-bin \
+    && apt-get install -y software-properties-common \
+    && add-apt-repository ppa:ubuntugis/ppa \
+    && apt-get install -y libgeos++-dev \
+    && apt-get install -y proj-bin \
+    && apt-get install -y gdal-bin \
+    && apt-get install -y libgdal-dev
+
 # Create the app directory
 RUN mkdir /app
  
@@ -10,6 +19,11 @@ WORKDIR /app
 # Set environment variables to optimize Python
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1 
+
+
+COPY . .
+# RUN python -m pip install --upgrade pip && \
+#     pip3 install -r requirements.txt 
  
 # Upgrade pip
 RUN pip install --upgrade pip 

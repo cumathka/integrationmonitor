@@ -1,12 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uri Integration Monitor</title>
-</head>
-<body>
-    <h1>Welcome to this amzing app.</h1>
-    <p>This is the landing page.</p>
-</body>
-</html>
+{% extends "base/base.html" %}
+
+{% load leaflet_tags %}
+
+{% block title %}Welcome to Integration Monitor{% endblock title %}
+
+{% block extra_head %}
+{% leaflet_css %}
+{% leaflet_js %}
+{% endblock extra_head %}
+
+
+{% block content %}
+<h1>Welcome to this amzing app.</h1>
+<p>This is the landing page.</p>
+<div>
+    {% leaflet_map "altdorf" callback="map_init" %}
+</div>
+
+
+{% endblock content %}
+
+{% block extra_js %}
+<script type="text/javascript">
+    function map_init(map, options) {
+        // get point lat and lon
+        var lon = "{{ city.point.x }}";
+        var lat = "{{ city.point.y }}";
+
+        // zoom to point & add it to map
+        map.setView([lat, lon], 12);
+        L.marker([lat, lon]).addTo(map);
+    }
+</script>
+{% endblock extra_js %}
