@@ -4,6 +4,7 @@ import InfoView from "@/views/InfoView.vue";
 import LearningView from "@/views/LearningView.vue";
 import JobsView from "@/views/JobsView.vue";
 import EventsView from "@/views/EventsView.vue";
+import NotFound from "@/views/NotFound.vue";
 
 const routes = [
   {
@@ -30,6 +31,15 @@ const routes = [
     path: "/events",
     name: "events",
     component: EventsView,
+  },
+  {
+    path: "/404",
+    name: "notFound",
+    component: NotFound,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: "/404",
   },
 ];
 

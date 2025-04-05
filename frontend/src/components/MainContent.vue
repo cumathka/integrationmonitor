@@ -44,17 +44,14 @@
           zu integrieren.
         </p>
         <div class="event-image">
-          <img 
-            src="https://c.animaapp.com/m939jagjfdOBIu/img/image-1.png" 
-            alt="Events" 
-            class="img-fluid"
-          >
+        <the-map></the-map>
         </div>
       </section>
     </main>
   </template>
   
   <script>
+   import TheMap from '@/components/TheMap.vue'
   export default {
     name: 'MainContent',
     data() {
@@ -82,7 +79,10 @@
           }
         ]
       }
-    }
+    },
+    components: {
+      TheMap
+    },
   }
   </script>
   
