@@ -1,0 +1,22 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+<div class="body-content">
+    {% for block in page.body_content %}
+      {% if block.block_type == 'richtext' %}
+        <div class="richtext-content">
+          {{ block.value|richtext }}
+        </div>
+      {% elif block.block_type == 'image' %}
+        <div class="image-content">
+          <img src="{{ block.value.url }}" alt="{{ block.value.alt }}" />
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  
+{% endblock %}
+
+
+
+
