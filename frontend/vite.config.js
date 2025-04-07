@@ -5,6 +5,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import path from 'path'
 
 export default defineConfig({
+  base: '/integrationmonitor/', // ✅ GitHub Pages için gerekli base ayarı
   plugins: [
     vue(),
     vueDevTools(), // Vue DevTools eklentisini aktif et
