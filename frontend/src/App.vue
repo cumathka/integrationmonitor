@@ -256,4 +256,39 @@ export default {
   line-height: var(--body-regular-line-height);
   font-style: var(--body-regular-font-style);
 }
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .landing-page .ellipse,
+  .landing-page .div,
+  .landing-page .ellipse-2,
+  .landing-page .ellipse-3 {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 992px) {
+  .landing-page .ellipse,
+  .landing-page .div,
+  .landing-page .ellipse-2,
+  .landing-page .ellipse-3 {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-page .ellipse,
+  .landing-page .div,
+  .landing-page .ellipse-2,
+  .landing-page .ellipse-3 {
+    display: none;
+  }
+
+  .main-container {
+    padding: 0 15px;
+  }
+
+  .full-width-image img {
+    min-height: 200px;
+  }
+}
 </style>
