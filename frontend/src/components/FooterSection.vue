@@ -88,11 +88,11 @@ export default {
 }
 
 .left-flag {
-  margin-left: -180px;
+  margin-left: -250px;
 }
 
 .right-flag {
-  margin-right: -180px;
+  margin-right: -250px;
 }
 
 .footer-grid {
